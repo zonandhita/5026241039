@@ -1,23 +1,51 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\DosenController;
 
+// Halaman utama (index)
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
-Route::get('halo', function () {
-	return "<h1>Halo, Selamat datang</h1> di tutorial laravel <i>www.malasngoding.com</i>";
+// Pertemuan 1
+Route::get('/pertemuan1', function () {
+    return view('pertemuan1');
 });
 
-Route::get('blog', function () {
-    return view('blog');
+// Pertemuan 2
+Route::get('/pertemuan2', function () {
+    return view('pertemuan2');
 });
 
-Route::get('pert5', function () {
+Route::get('/pertemuan2/news', function () {
+    return view('news');
+});
+
+Route::get('/pertemuan2/news1', function () {
+    return view('news1');
+});
+
+// Pertemuan 3
+Route::get('/pertemuan3', function () {
+    return view('pertemuan3');
+});
+
+// Tugas Pertemuan 3
+Route::get('/tugaspertemuan3', function () {
+    return view('tugaspertemuan3');
+});
+
+// Pertemuan 4
+Route::get('/pertemuan4', function () {
+    return view('pertemuan4');
+});
+
+// Pertemuan 5
+Route::get('/pertemuan5', function () {
     return view('pertemuan5');
 });
 
-Route::get('/dosen', [DosenController::class, 'index']);
-Route::get('/biodata', [DosenController::class, 'biodata']);
+// Tugas Pertemuan 5
+Route::get('/tugaspertemuan5', function () {
+    return view('tugaspertemuan5');
+});

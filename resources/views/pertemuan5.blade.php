@@ -4,139 +4,169 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Dell</title>
+    <title>Dell - Pertemuan 5</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
-
-    <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Bootstrap CDN (menggantikan vendor lokal) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
-    <!-- Main CSS File -->
-    <link href="assets/css/main.css" rel="stylesheet">
+    <style>
+      /* Warna & style dasar dari template Arsha */
+      :root {
+        --color-primary: #106eea;
+        --color-primary-dark: #0d58be;
+      }
 
-    <!-- =======================================================
-  * Template Name: Arsha
-  * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
-  * Updated: Feb 22 2025 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+      body { font-family: 'Open Sans', sans-serif; }
+
+      #header {
+        background: #37517e;
+        padding: 15px 0;
+      }
+
+      .sitename { color: #fff; font-size: 1.5rem; font-weight: 700; margin: 0; }
+
+      .navmenu ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 20px; }
+      .navmenu ul li a { color: rgba(255,255,255,0.7); text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
+      .navmenu ul li a:hover, .navmenu ul li a.active { color: #fff; }
+
+      #hero {
+        background: linear-gradient(135deg, #37517e 0%, #1a3a5c 100%);
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        color: white;
+        padding: 80px 0;
+      }
+
+      #hero h1 { font-size: 2.2rem; font-weight: 700; line-height: 1.3; margin-bottom: 20px; }
+      #hero p { font-size: 1rem; color: rgba(255,255,255,0.8); }
+
+      .btn-get-started {
+        display: inline-block;
+        background: var(--color-primary);
+        color: #fff;
+        padding: 12px 30px;
+        border-radius: 4px;
+        font-weight: 600;
+        text-decoration: none;
+        margin-right: 15px;
+        transition: 0.3s;
+      }
+
+      .btn-get-started:hover { background: var(--color-primary-dark); color: #fff; text-decoration: none; }
+
+      .btn-watch-video {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        transition: 0.3s;
+      }
+
+      .btn-watch-video:hover { color: rgba(255,255,255,0.8); text-decoration: none; }
+      .btn-watch-video i { font-size: 1.5rem; }
+
+      #why-us {
+        background: #f3f5fa;
+        padding: 60px 0;
+      }
+
+      #why-us h3 { font-size: 1.3rem; font-weight: 700; color: #37517e; margin-bottom: 15px; }
+      #why-us p { color: #444; line-height: 1.7; }
+
+      .hero-img img { max-width: 100%; border-radius: 8px; }
+
+      .animated {
+        animation: up-down 2s ease-in-out infinite alternate-reverse both;
+      }
+
+      @keyframes up-down {
+        0% { transform: translateY(10px); }
+        100% { transform: translateY(-10px); }
+      }
+    </style>
 </head>
 
-<body class="index-page">
-    <header id="header" class="header d-flex align-items-center fixed-top">
-        <div class="container-fluid container-xl position-relative d-flex align-items-center">
-
-            <a href="index.html" class="logo d-flex align-items-center me-auto">
-                <!-- Uncomment the line below if you also wish to use an image logo -->
-                <!-- <img src="assets/img/logo.webp" alt=""> -->
+<body>
+    <header id="header" class="d-flex align-items-center fixed-top">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a href="#hero" class="d-flex align-items-center text-decoration-none">
                 <h1 class="sitename">Dell</h1>
             </a>
-
-            <nav id="navmenu" class="navmenu">
+            <nav class="navmenu">
                 <ul>
                     <li><a href="#hero" class="active">Home</a></li>
                     <li><a href="#why-us">Feature</a></li>
-                    <li><a href="#services">Services</a></li>
-
                 </ul>
-                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
-
         </div>
     </header>
 
-    <main class="main">
-        <!-- Hero Section -->
-        <section id="hero" class="hero section dark-background">
+    <main class="main" style="padding-top: 70px;">
 
+        <!-- Hero Section -->
+        <section id="hero">
             <div class="container">
-                <div class="row gy-4">
-                    <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center"
-                        data-aos="zoom-out">
+                <div class="row gy-4 align-items-center">
+                    <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
                         <h1>Technology built for you, your vision, your ambition and your story.</h1>
                         <p></p>
-
-                        <div class="d-flex">
-                            <a href="#about" class="btn-get-started">Get Started</a>
-                            <a href="visitstore.bio/dell?tab=ig"
-                                class="glightbox btn-watch-video d-flex align-items-center"><i
-                                    class="bi bi-play-circle"></i><span>Visit Store</span></a>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="#why-us" class="btn-get-started">Get Started</a>
+                            <a href="https://visitstore.bio/dell?tab=ig" target="_blank" class="btn-watch-video">
+                                <i class="bi bi-play-circle"></i>
+                                <span>Visit Store</span>
+                            </a>
                         </div>
                     </div>
-                    <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
-                        <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
+                    <div class="col-lg-6 order-1 order-lg-2 hero-img text-center">
+                        {{-- Gambar laptop Dell (gunakan gambar dari unsplash karena asset lokal tidak tersedia) --}}
+                        <img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=700&q=80&auto=format&fit=crop"
+                             class="img-fluid animated" alt="Dell Laptop" style="border-radius: 12px;">
                     </div>
                 </div>
             </div>
-
-        </section><!-- /Hero Section -->
+        </section>
 
         <!-- Why Us Section -->
-        <section id="why-us" class="section why-us light-background" data-builder="section">
-
-            <div class="container-fluid">
-
-                <div class="row gy-4">
-
-                    <div class="col-lg-7 d-flex flex-column justify-content-center order-2 order-lg-1">
-
-                        <div class="content px-xl-5" data-aos="fade-up" data-aos-delay="100">
-                            <h3><span>“The XPS 14 is back and better than ever.” - </span><strong>@zdnet_official</strong></h3>
+        <section id="why-us">
+            <div class="container">
+                <div class="row gy-4 align-items-center">
+                    <div class="col-lg-7 d-flex flex-column justify-content-center">
+                        <div class="content px-xl-5">
+                            <h3><span>"The XPS 14 is back and better than ever." - </span><strong>@zdnet_official</strong></h3>
                             <p>
-                                XPS 14 reflects our renewed focus on thoughtful design and real world performance. From a refined chassis to efficiency driven hardware choices, ZDNet highlights why this generation represents a true return to form.
+                                XPS 14 reflects our renewed focus on thoughtful design and real world performance.
+                                From a refined chassis to efficiency driven hardware choices, ZDNet highlights why
+                                this generation represents a true return to form.
                             </p>
                         </div>
-                        </div>
-
-                    <div class="col-lg-5 order-1 order-lg-2 why-us-img">
-                        <img src="assets/img/laptop.png" class="img-fluid" alt="" data-aos="zoom-in"
-                            data-aos-delay="100">
+                    </div>
+                    <div class="col-lg-5 text-center">
+                        <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&q=80&auto=format&fit=crop"
+                             class="img-fluid" alt="Dell XPS" style="border-radius: 8px;">
                     </div>
                 </div>
-
             </div>
+        </section>
 
-        </section><!-- /Why Us Section -->
     </main>
-</body>
 
-<!-- Scroll Top -->
-<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-        class="bi bi-arrow-up-short"></i></a>
+    <div class="container text-center py-4">
+        <a href="{{ url('/') }}">← Kembali ke Home</a>
+    </div>
 
-<!-- Preloader -->
-<div id="preloader"></div>
-
-<!-- Vendor JS Files -->
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/php-email-form/validate.js"></script>
-<script src="assets/vendor/aos/aos.js"></script>
-<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-<!-- Main JS File -->
-<script src="assets/js/main.js"></script>
-
-</header>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
