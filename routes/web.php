@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PegawaiDBController;
 
 // Halaman utama (index)
 Route::get('/', function () {
@@ -49,3 +50,5 @@ Route::get('/pertemuan5', function () {
 Route::get('/tugaspertemuan5', function () {
     return view('tugaspertemuan5');
 });
+
+Route::get('/pegawai/',[PegawaiDBController::class, 'index1']);
