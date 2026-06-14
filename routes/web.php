@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PegawaiDBController;
+use App\Http\Controllers\maskerController;
 
 // Halaman utama (index1)
 Route::get('/', function () {
@@ -57,12 +58,13 @@ Route::get('biodata', [DosenController::class, 'biodata']);
 Route::get('/pegawainama/{nama}', [PegawaiController::class, 'index1']);
 Route::get('/formulir', [PegawaiController::class, 'formulir']);
 Route::post('/formulir/proses', [PegawaiController::class, 'proses']);
-//blog
+
+// blog
 Route::get('/blog', [BlogController::class, 'home']);
 Route::get('/blog/tentang', [BlogController::class, 'tentang']);
 Route::get('/blog/kontak', [BlogController::class, 'kontak']);
 
-//crud
+// crud pegawai
 Route::get('/pegawai/', [PegawaiDBController::class, 'index1']);
 Route::get('/pegawaitambah', [PegawaiDBController::class, 'tambah']);
 Route::post('/pegawaistore', [PegawaiDBController::class, 'store']);
@@ -71,11 +73,11 @@ Route::post('/pegawaiupdate', [PegawaiDBController::class, 'update']);
 Route::get('/pegawaihapus/{id}', [PegawaiDBController::class, 'hapus']);
 Route::get('/pegawaicari', [PegawaiDBController::class, 'cari']);
 
-//crud sepatu
-Route::get('/sepatu/', [SepatuController::class, 'index1']);
-Route::get('/sepatutambah', [SepatuController::class, 'tambah']);
-Route::post('/sepatustore', [SepatuController::class, 'store']);
-Route::get('/sepatuedit/{id}', [SepatuController::class, 'edit']);
-Route::post('/sepatuupdate', [SepatuController::class, 'update']);
-Route::get('/sepatuhapus/{id}', [SepatuController::class, 'hapus']);
-Route::get('/sepatucari', [SepatuController::class, 'cari']);
+// crud masker
+Route::get('/masker', [maskerController::class, 'indexMasker']);
+Route::get('/masker_cari', [maskerController::class, 'cariMasker']);
+Route::get('/masker_tambah', [maskerController::class, 'tambahMasker']);
+Route::post('/masker_store', [maskerController::class, 'storeMasker']);
+Route::get('/masker_edit/{id}', [maskerController::class, 'editMasker']);
+Route::post('/masker_update', [maskerController::class, 'updateMasker']);
+Route::get('/masker_hapus/{id}', [maskerController::class, 'hapusMasker']);
