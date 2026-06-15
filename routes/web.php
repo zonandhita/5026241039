@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\maskerController;
+use App\Http\Controllers\NilaiPesertaController;
 
 // Halaman utama (index1)
 Route::get('/', function () {
@@ -81,3 +82,8 @@ Route::post('/masker_store', [maskerController::class, 'storeMasker']);
 Route::get('/masker_edit/{id}', [maskerController::class, 'editMasker']);
 Route::post('/masker_update', [maskerController::class, 'updateMasker']);
 Route::get('/masker_hapus/{id}', [maskerController::class, 'hapusMasker']);
+
+// EAS - nilai_peserta
+Route::get('/eas', [NilaiPesertaController::class, 'index']);
+Route::get('/eas_tambah', [NilaiPesertaController::class, 'tambah']);
+Route::post('/eas_store', [NilaiPesertaController::class, 'store']);

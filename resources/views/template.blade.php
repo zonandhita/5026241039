@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>5026241046 - Zonandhits Ismarina</title>
+    <title>5026241039 - Zonandhita Ismarina</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
 
@@ -55,7 +55,7 @@
                     <li><a href="/sepatu">PR 1</a></li>
                     <li><a href="#why-us">PR 2</a></li>
                     <li><a href="#services">Pertemuan 15</a></li>
-                    <li><a href="#services">EAS</a></li>
+                    <li><a href="/eas">EAS</a></li>
 
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
